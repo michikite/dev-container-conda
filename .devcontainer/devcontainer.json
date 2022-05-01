@@ -1,0 +1,25 @@
+{
+	"name": "michikite.dev-container-conda",
+	"dockerComposeFile": [
+		"./docker-compose.yml",  
+	  ], 
+	"service": "debug_app",
+	"runServices": ["debug_app"],
+	"workspaceFolder": "/workspace",
+	"settings": { 
+		"terminal.integrated.profiles.linux": {
+			"bash": {
+				"path": "/bin/bash"
+			}
+		}
+	},
+	"extensions": [
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"ms-azuretools.vscode-docker",
+		"ms-toolsai.jupyter",
+		"zainchen.json",
+		"tomoki1207.pdf",
+		"grapecity.gc-excelviewer"
+	]
+}

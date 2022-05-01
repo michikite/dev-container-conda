@@ -1,0 +1,15 @@
+version: "3.7"
+
+networks:
+  app-net: null
+  
+services:
+  debug_app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.debug
+    image: michikite/dev-container-conda
+    networks:
+      - app-net
+    volumes:
+      - ../:/workspace

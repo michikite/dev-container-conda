@@ -1,0 +1,16 @@
+FROM conda/miniconda3:latest
+USER root
+
+COPY ./environment.yml /requirements/
+
+RUN conda info
+RUN conda update -n base conda -y
+
+RUN conda env create --file requirements/environment.yml
+RUN conda env list
+
+RUN conda install ipython_genutils
+RUN conda install ipykernel
+RUN ipython kernel install --user --name=env1
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]

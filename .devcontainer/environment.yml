@@ -1,0 +1,13 @@
+name: env1
+channels:
+  - defaults
+dependencies:
+  - python=3.7
+  - ipython_genutils
+  - notebook
+  - numpy>=1.16
+  - matplotlib>=3.1
+  - scipy
+  - pillow
+  - libtiff=4.0.10
+  - scikit-learn
